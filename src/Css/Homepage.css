@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.homepage-container {
+  display: flex;
+  padding: 0;
+  padding-right: 0;
+}
