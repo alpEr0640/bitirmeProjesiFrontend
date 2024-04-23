@@ -1,9 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function admin() {
-  return (
-    <div>admin</div>
-  )
+function Admin() {
+<div>Admin</div>
 }
 
-export default admin
+export default Admin
