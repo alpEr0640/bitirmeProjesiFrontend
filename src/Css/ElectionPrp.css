@@ -1,0 +1,13 @@
+.ElectionPrpContainer{
+    width: 25%;
+    margin-left: 50px;
+    padding-left: 50px;
+    height: 60vh;
+    border-left: 2px solid black;
+}
+.elcPropertyTitle{
+    height: 10%;
+}
+.elcPropertyBody{
+    height: 85%;
+}

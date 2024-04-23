@@ -122,19 +122,29 @@ const [todos, setTodos] = useState([]);
         <div className="pagination">
           <div className="paginationBody">
             <ul className="paginationItem">
-              <li
-                className={currentPage === 1 ? "disable" : null}
-                onClick={handlePrevbtn}
-              >
-                <i className="fa-solid fa-backward-step"></i>
-              </li>
+              {todos.length > 5 ? (
+                <li
+                  className={currentPage === 1 ? "disable" : null}
+                  onClick={handlePrevbtn}
+                >
+                  <i className="fa-solid fa-backward-step"></i>
+                </li>
+              ) : (
+                <></>
+              )}
+
               {renderPageNumbers}
-              <li
-                className={currentPage === todos.length ? "disable" : null}
-                onClick={handleNextbtn}
-              >
-                <i className="fa-solid fa-forward-step"></i>
-              </li>
+
+              {todos.length > 5 ? (
+                <li
+                  className={currentPage === todos.length ? "disable" : null}
+                  onClick={handleNextbtn}
+                >
+                  <i className="fa-solid fa-forward-step"></i>
+                </li>
+              ) : (
+                <></>
+              )}
             </ul>
           </div>
         </div>

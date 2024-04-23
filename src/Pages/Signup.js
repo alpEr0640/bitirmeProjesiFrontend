@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { localbasebackendurl } from "../Constants";
 import axios from "axios";
 import '../Css/signup.css'
-import { Navigate, useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 function Signup() {
   const [name, setName] = useState();
@@ -40,27 +40,35 @@ function Signup() {
   return (
     <div className="signupContainer">
       <div className="signup">
-        <div className="signupTitle">Giriş Yap</div>
+        <div className="signupTitle">Kayıt Ol</div>
         <div className="signupBody">
           <input
+            className="signupInputs"
+            autocomplete="off"
             onChange={(e) => setName(e.target.value)}
             id="name"
             value={name}
             placeholder="Ad"
           ></input>
           <input
+            autocomplete="off"
+            className="signupInputs"
             onChange={(e) => setSurname(e.target.value)}
             id="surname"
             value={surname}
             placeholder="Soyad"
           ></input>
           <input
+            autocomplete="off"
+            className="signupInputs"
             onChange={(e) => setKimlikNo(e.target.value)}
             id="kimlikNo"
             value={kimlikNo}
             placeholder="Tc Kimlik Numarası"
           ></input>
           <input
+            autocomplete="off"
+            className="signupInputs"
             onChange={(e) => setPassword(e.target.value)}
             id="password"
             value={password}
@@ -68,12 +76,16 @@ function Signup() {
             type="password"
           ></input>
           <input
+            autocomplete="off"
+            className="signupInputs"
             onChange={(e) => setDogumTrh(e.target.value)}
             id="dogumTrh"
             value={dogumTrh}
             type="date"
           ></input>
           <input
+            autocomplete="off"
+            className="signupInputs"
             onChange={(e) => setTelNo(e.target.value)}
             id="telNo"
             value={telNo}

@@ -50,7 +50,7 @@ export default function Directory() {
   return (
     <div className="directoryContainer">
       <div className="directory">
-        <div className="directoryTitle">DUYURULAR</div>
+        <div className="directoryTitle">Rehber</div>
         <div className="directoryBody">
           <div
             className={`directoryBody ${
