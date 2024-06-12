@@ -2,9 +2,8 @@
     margin: 0;
     padding: 0;
 }
-.CreateElectionContainer {
+.electionResultsContainer {
   display: flex;
   padding: 0;
   padding-right: 0;
 }
-

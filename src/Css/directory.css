@@ -25,7 +25,7 @@
 .directoryBody{
   margin-top: 20px;
   width: 100%;
-  height: 60%;
+  height: 70%;
   display: flex;
   justify-content: center;
 }
@@ -43,7 +43,8 @@
   background-color: #468b97 !important;
 }
 .image{
-  width: 60%;
+  width: 50%;
+  height: 100%;
   
 }
 .photos{

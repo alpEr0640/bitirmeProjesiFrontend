@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { localbasebackendurl } from "../Constants";
 import axios from "axios";
-import '../Css/signup.css'
-import {useNavigate} from "react-router-dom";
+import "../Css/signup.css";
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
   const [name, setName] = useState();
@@ -30,10 +30,8 @@ function Signup() {
         payload
       );
       navigation("/");
-
-      
     } catch (err) {
-      alert(err.response.data)
+      alert(err.response.data);
       console.log(err);
     }
   };
@@ -75,22 +73,25 @@ function Signup() {
             placeholder="şifte"
             type="password"
           ></input>
-          <input
-            autocomplete="off"
-            className="signupInputs"
-            onChange={(e) => setDogumTrh(e.target.value)}
-            id="dogumTrh"
-            value={dogumTrh}
-            type="date"
-          ></input>
-          <input
-            autocomplete="off"
-            className="signupInputs"
-            onChange={(e) => setTelNo(e.target.value)}
-            id="telNo"
-            value={telNo}
-            type="number"
-          ></input>
+          <div className="double">
+            <input
+              className="doubleInput"
+              autocomplete="off"
+              onChange={(e) => setDogumTrh(e.target.value)}
+              id="dogumTrh"
+              value={dogumTrh}
+              type="date"
+            ></input>
+            <input
+              className="doubleInput"
+              autocomplete="off"
+              onChange={(e) => setTelNo(e.target.value)}
+              id="telNo"
+              value={telNo}
+              type="number"
+              placeholder="şifte"
+            ></input>
+          </div>
           <button onClick={(e) => submit(e)} className="signupButton">
             Giriş Yap
           </button>

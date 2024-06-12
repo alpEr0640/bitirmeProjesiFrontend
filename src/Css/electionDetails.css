@@ -1,0 +1,25 @@
+.electionDetailsContainer {
+  padding-left: 100px;
+}
+
+.closeDetails {
+  cursor: pointer;
+}
+.spanWinner {
+    font-weight: 500;
+    font-size: 2rem;
+    font-style: Bold;
+    color: #1D5B79;
+}
+
+.winner {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+    font-size: 2rem;
+    font-style: Bold;
+}
+

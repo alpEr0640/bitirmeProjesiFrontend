@@ -1,14 +1,12 @@
-.CreateElectionCndContainer {
-  width: 20%;
-  margin-left: 100px;
+.electionContainer {
+  width: 30%;
   height: 70vh;
+  margin-left: 50px;
 }
-
-.elcCandidates {
+.elections {
   height: 100%;
 }
-
-.elcCandidatesTitle {
+.electionsTitle {
   position: relative;
   width: 100%;
   height: 10%;
@@ -17,50 +15,37 @@
   align-items: center;
   border-bottom: 2px solid black;
 }
-
-.elcCandidatesBody {
+.electionsBody {
+  cursor: pointer;
   overflow-y: auto;
   position: relative;
   margin-top: 20px;
   width: 100%;
   height: 85%;
 }
-.candidates {
+
+.specialElections {
   height: 70px;
   margin: 10px 0;
   background-color: #1d5b79;
   border-radius: 10px;
   color: white;
-  position: relative;
-  width: 90%;
   display: flex;
 }
-.candidatesLeft {
+
+.leftElections {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rightElections {
   width: 20%;
   display: flex;
-  align-items: center;
   justify-content: center;
-}
-.candidatesMid {
-  width: 70%;
-  display: flex;
   align-items: center;
-  justify-content: center;
-}
-.candidatesRight {
-  width: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
 }
-.createCandidate {
-  border: none;
-  border-radius: 10px;
-  height: 50px;
-  width: 200px;
-  position: absolute;
-  left: 37%;
-  background-color: #1d5b79;
-  color: #f2e3db;
+.rightElections i {
+  font-size: 2rem;
 }

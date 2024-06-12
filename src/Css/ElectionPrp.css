@@ -1,13 +1,63 @@
-.ElectionPrpContainer{
-    width: 25%;
-    margin-left: 50px;
-    padding-left: 50px;
-    height: 60vh;
-    border-left: 2px solid black;
+.ElectionPrpContainer {
+  width: 25%;
+  margin-left: 50px;
+  padding-left: 50px;
+  height: 70vh;
+  border-left: 2px solid black;
 }
-.elcPropertyTitle{
-    height: 10%;
+.elcProperty {
+  height: 100%;
 }
-.elcPropertyBody{
-    height: 85%;
+.elcPropertyTitle {
+  position: relative;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid black;
 }
+.elcPropertyBody {
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  height: 85%;
+}
+.electionSelect , .winCondition{
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+
+}
+.electionExplanation , .electionTitle{
+  text-indent: 10px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+}
+.electionType div{
+  margin: 20px 0px !important;
+}
+
+.initDate ,.endDate{
+  width: 100%;
+  height: 50px;
+  border: none;
+  font-size: 20px;
+  padding-inline: 10px  ;
+  border-radius: 10px;
+}
+
+.createElection{
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  width: 200px;
+  position: absolute;
+  right: 0;
+  background-color: #1D5B79;
+  color: #F2E3DB;
+}
+

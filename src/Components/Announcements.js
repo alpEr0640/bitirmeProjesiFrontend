@@ -13,12 +13,14 @@ const [todos, setTodos] = useState([]);
         setLoading(true);
         const response = await axios.get(`${localbasebackendurl}api/announcement`);
         setTodos(response.data);
+        
       } catch (err) {
         console.log(err);
       }
     };
     fetchTodos();
   }, []);
+  
   /////////////////////////////////////////////////////////
   const [currentPage, setcurrentPage] = useState(1);
   const [itemsPerPage, setitemsPerPage] = useState(1);
