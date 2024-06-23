@@ -17,7 +17,7 @@ function ElectionDetails() {
   };
 
   useEffect(() => {
-    if (selectedVoters.length > 0) {
+    if (selectedVoters.length > 0 && selectedElectionData.length > 0) {
       console.log("Formatted Date: ", formattedDate);
       console.log("Election Init Date: ", selectedElectionData[0].endDate);
 
@@ -25,6 +25,11 @@ function ElectionDetails() {
 
       if (electionInitDate < currentDate) {
         console.log("Election is ongoing or past.");
+
+        const totalVotes = selectedVoters.reduce(
+          (sum, voter) => sum + voter.vote,
+          0
+        );
         const winningCandidate = selectedVoters.reduce((prev, current) =>
           prev.vote > current.vote ? prev : current
         );
@@ -34,17 +39,19 @@ function ElectionDetails() {
         );
 
         if (!isTie) {
-          setWinner(
-            `${capitalizeFirstLetter(
-              winningCandidate.candidateId.name
-            )} ${capitalizeFirstLetter(winningCandidate.candidateId.surname)}`
-          );
+          if (winningCandidate.vote > totalVotes / 2) {
+            setWinner(
+              `${capitalizeFirstLetter(
+                winningCandidate.candidateId.name
+              )} ${capitalizeFirstLetter(winningCandidate.candidateId.surname)}`
+            );
+          } else {
+            setWinner("Seçim ikinci tura kalmıştır");
+          }
         } else {
-          setWinner("Seçim Sonuçlanmadı");
         }
-      }
-      else {
-      setWinner("")
+      } else {
+        setWinner("");
       }
     } else {
       setWinner("");
@@ -83,7 +90,6 @@ function ElectionDetails() {
     );
   };
 
-
   return (
     <>
       <div className="electionDetailsContainer">
@@ -103,10 +109,7 @@ function ElectionDetails() {
             dataKey="vote"
           >
             {selectedVoters.map((candidate, index) => (
-              <Cell
-                key={`cell-${index}`}
-                fill={candidate.candidateColor}
-              />
+              <Cell key={`cell-${index}`} fill={candidate.candidateColor} />
             ))}
           </Pie>
           <Tooltip formatter={(value) => [`${value} votes`, "Votes"]} />

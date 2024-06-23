@@ -26,6 +26,7 @@
   height: 85%;
 }
 .candidates {
+  overflow-y: auto;
   height: 70px;
   margin: 10px 0;
   background-color: #1d5b79;
@@ -54,6 +55,7 @@
   justify-content: center;
   cursor: pointer;
 }
+
 .createCandidate {
   border: none;
   border-radius: 10px;
